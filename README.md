@@ -1,3 +1,5 @@
+![osx-netflix](https://dl.dropboxusercontent.com/u/3542/osx-netflix/screenshot.png)
+
 # osx-netflix
 A simple WebView for Netflix.com 
 
