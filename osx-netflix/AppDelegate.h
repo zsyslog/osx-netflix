@@ -10,13 +10,11 @@
 #import <WebKit/WebKit.h>
 @import AppKit;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
-    WebView *webview;
-    WebFrame *webFrame;
-}
+@interface AppDelegate : NSObject <NSApplicationDelegate> 
 
 @property (assign) IBOutlet NSWindow *window;
-@property (retain, nonatomic) IBOutlet WebView *webView;
+@property (nonatomic, assign) IBOutlet WebFrame *webFrame;
+@property (nonatomic, assign) IBOutlet WebView *webView;
 
 @property NSSize contentMaxSize;
 

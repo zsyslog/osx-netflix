@@ -12,14 +12,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    [webview setFrameLoadDelegate:self];
+    
+    [_webView setFrameLoadDelegate:self];
     
     NSURL *url = [NSURL URLWithString:@"http://www.netflix.com/Login"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [[[self webView] mainFrame] loadRequest:urlRequest];
     
     
-    //   NSRect screenRect = NSMakeRect(0.f, 0.f, 1240.f, 830.f);
+    //   NSRect screenRect = NSMakeRect(0.f, 0.f, 1240.f, 830.f); 
     // ---- Detect screen size ----- //
     NSRect screenRect;
     NSArray *screenArray = [NSScreen screens];
@@ -31,7 +32,8 @@
     
     // ----- Set window size ---- //
     [_window setFrame:screenRect display:YES animate:YES];
-    
+    [_window setContentView:_webView];
+
     //NSRect webFrameRect = [[[webFrame frameView] documentView] frame];
     //get the rect of the current webview
     //NSRect webViewRect = [webview frame];
@@ -42,7 +44,9 @@
                                        NSWidth(screenRect),
                                        NSHeight(screenRect));
     
-    [webview setFrame:newWebViewRect];
+    [_webView setFrame:newWebViewRect];
+    
+    // NSLog(@"Rect: %@",NSStringFromRect(_webView.frame));
     
 }
 
