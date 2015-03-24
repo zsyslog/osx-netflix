@@ -7,9 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
+@import AppKit;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    WebView *webview;
+    WebFrame *webFrame;
+}
 
+@property (assign) IBOutlet NSWindow *window;
+@property (retain, nonatomic) IBOutlet WebView *webView;
+
+@property NSSize contentMaxSize;
 
 @end
 

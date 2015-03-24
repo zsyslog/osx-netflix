@@ -12,6 +12,7 @@
 		94631E2F1AC097DF00D20BE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94631E2E1AC097DF00D20BE5 /* Images.xcassets */; };
 		94631E321AC097DF00D20BE5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94631E301AC097DF00D20BE5 /* MainMenu.xib */; };
 		94631E3E1AC097DF00D20BE5 /* osx_netflixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94631E3D1AC097DF00D20BE5 /* osx_netflixTests.m */; };
+		94631E481AC0996400D20BE5 /* WebKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 94631E471AC0996400D20BE5 /* WebKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		94631E371AC097DF00D20BE5 /* osx-netflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "osx-netflixTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94631E3C1AC097DF00D20BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94631E3D1AC097DF00D20BE5 /* osx_netflixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osx_netflixTests.m; sourceTree = "<group>"; };
+		94631E471AC0996400D20BE5 /* WebKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = WebKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94631E481AC0996400D20BE5 /* WebKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 		94631E271AC097DF00D20BE5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				94631E471AC0996400D20BE5 /* WebKit */,
 				94631E281AC097DF00D20BE5 /* Info.plist */,
 				94631E2C1AC097DF00D20BE5 /* main.m */,
 			);
@@ -328,6 +332,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "osx-netflix/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/osx-netflix",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -339,6 +347,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "osx-netflix/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/osx-netflix",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
