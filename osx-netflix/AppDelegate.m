@@ -31,6 +31,9 @@
     }
     
     // ----- Set window size ---- //
+//    [[_window standardWindowButton:NSWindowCloseButton] setHidden:YES];
+//    [[_window standardWindowButton:NSWindowMiniaturizeButton] setHidden:YES];
+//    [[_window standardWindowButton:NSWindowZoomButton] setHidden:YES];
     [_window setFrame:screenRect display:YES animate:YES];
     [_window setContentView:_webView];
 
@@ -51,6 +54,8 @@
 }
 
 
-
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
+    return YES;
+}
 
 @end
